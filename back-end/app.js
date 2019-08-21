@@ -8,6 +8,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const database = require('./config/database');
+database('mongodb://localhost:27017/4not-2019-2');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -19,5 +22,8 @@ app.use('/users', usersRouter);
 
 var testeRouter = require('./routes/teste');
 app.use('/teste', testeRouter);
+
+const curso = require('./routes/curso');
+app.use('/curso', curso);
 
 module.exports = app;
