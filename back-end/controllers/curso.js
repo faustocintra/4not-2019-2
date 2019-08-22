@@ -15,5 +15,4 @@ controller.novo = async function(req, res) {
    }
 }
 
-
 module.exports = controller;
