@@ -64,4 +64,21 @@ controller.atualizar = async function(req, res) {
    }
 }
 
+controller.excluir = async function(req, res) {
+   const id = req.body._id;
+   try {
+      const curso = await Curso.findByIdAndDelete(id);
+      if(curso) {
+         res.sendStatus(204).end();
+      }
+      else {
+         res.sendStatus(404).end();
+      }
+   }
+   catch(erro) {
+      console.error(erro);
+      res.sendStatus(500).end();
+   }
+}
+
 module.exports = controller;
