@@ -11,6 +11,9 @@ var app = express();
 const database = require('./config/database');
 database('mongodb://localhost:27017/4not-2019-2');
 
+const cors = require('cors');
+app.use(cors());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
