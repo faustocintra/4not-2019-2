@@ -19,7 +19,7 @@ export class ProfessorService {
   private endPoint : string = 'professor';
 
   listar() {
-    return this.http.get(env.apiUri + this.endPoint);
+    return this.http.get(env.apiUri + this.endPoint).toPromise();
   }
 
 }

@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './ui/header/header.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { FooterComponent } from './ui/footer/footer.component';
+import { ProfessorListComponent } from './professor/professor-list/professor-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainMenuComponent,
-    FooterComponent
+    FooterComponent,
+    ProfessorListComponent
   ],
   imports: [
     HttpClientModule,
