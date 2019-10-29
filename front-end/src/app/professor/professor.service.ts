@@ -22,4 +22,11 @@ export class ProfessorService {
     return this.http.get(env.apiUri + this.endPoint).toPromise();
   }
 
+  excluir(id: string) {
+    // HttpClient.delete() não permite passar um parâmetro body.
+    // Por isso, aqui usamos HttpClient.request('delete', ...).
+    return this.http.request('delete', env.apiUri + this.endPoint, 
+      {body: {_id: id}}).toPromise();
+  }
+
 }

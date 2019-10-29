@@ -11,6 +11,9 @@ import { HeaderComponent } from './ui/header/header.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { ProfessorListComponent } from './professor/professor-list/professor-list.component';
+import { ConfirmDlgComponent } from './ui/confirm-dlg/confirm-dlg.component';
+import { MatDialogModule } from '@angular/material';
+import { ProfessorFormComponent } from './professor/professor-form/professor-form.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { ProfessorListComponent } from './professor/professor-list/professor-lis
     HeaderComponent,
     MainMenuComponent,
     FooterComponent,
-    ProfessorListComponent
+    ProfessorListComponent,
+    ConfirmDlgComponent,
+    ProfessorFormComponent
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +31,11 @@ import { ProfessorListComponent } from './professor/professor-list/professor-lis
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    ConfirmDlgComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

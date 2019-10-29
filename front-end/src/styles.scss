@@ -23,3 +23,17 @@ section#content {
 .mat-row:hover {
    background-color: rgba(yellow, 0.10); /* Amarelo 10% de opacidade */
 }
+
+.add-new-toolbar {
+   background: transparent;
+   margin-bottom: 25px;
+}
+
+.add-new-toolbar mat-toolbar-row {
+   padding: 0;
+}
+
+.add-new-toolbar a {
+   font-size: 120%;
+   padding: 8px 16px;   
+}
