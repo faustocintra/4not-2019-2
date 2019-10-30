@@ -37,3 +37,9 @@ section#content {
    font-size: 120%;
    padding: 8px 16px;   
 }
+
+.std-form mat-form-field {
+   max-width: 500px;
+   width: 100%;
+   margin-right: 30px;
+}

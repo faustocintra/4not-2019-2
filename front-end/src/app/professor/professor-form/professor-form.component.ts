@@ -9,6 +9,9 @@ export class ProfessorFormComponent implements OnInit {
 
   constructor() { }
 
+  title: string = 'Novo professor';
+  professor: any = {}; // Objeto vazio
+
   ngOnInit() {
   }
 
