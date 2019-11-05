@@ -6,7 +6,8 @@ controller.novo = async function(req, res) {
    try {
       await Professor.create(req.body);
       // HTTP 201: Created
-      res.sendStatus(201).end();
+      //res.sendStatus(201).end();
+      res.status(201).send(''); // Para o Angular
    }
    catch(erro) {
       console.error(erro);

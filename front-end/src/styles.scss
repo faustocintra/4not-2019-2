@@ -43,3 +43,17 @@ section#content {
    width: 100%;
    margin-right: 30px;
 }
+
+.std-form {
+   max-width: 80%;
+   margin: 0 auto;
+}
+
+.form-buttons {
+   background: transparent;
+}
+
+.form-buttons mat-toolbar-row {
+   display: flex;
+   justify-content: space-around;
+}

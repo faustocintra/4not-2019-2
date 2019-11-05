@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
 
-<form class="std-form">
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
    <mat-form-field>
       <input matInput placeholder="Nome completo" required [(ngModel)]="professor.nome" name="nome">
    </mat-form-field>
@@ -40,5 +40,16 @@
       <input matInput placeholder="E-mail" required [(ngModel)]="professor.email" name="email" type="email">
       <mat-icon matPrefix>email</mat-icon>
    </mat-form-field>
+
+   <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         <button mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+         <button mat-raised-button (click)="voltar(f)">
+            Voltar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
 
 </form>
