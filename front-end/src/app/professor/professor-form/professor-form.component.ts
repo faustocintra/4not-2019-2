@@ -61,8 +61,26 @@ export class ProfessorFormComponent implements OnInit {
     }
   }
 
-  voltar(form: NgForm) {
-    // Vazio por enquanto
+  async voltar(form: NgForm) {
+    
+    let result = true;
+    console.log(form);
+    // form.dirty = formulário "sujo", não salvo (via código)
+    // form.touched = o conteúdo de algum campo foi alterado (via usuário)
+    if(form.dirty && form.touched) {
+      let dialogRef = this.dialog.open(ConfirmDlgComponent, {
+        width: '50%',
+        data: { question: 'Há dados não salvos. Deseja realmente voltar?' }
+      });
+
+      result = await dialogRef.afterClosed().toPromise();
+
+    }
+
+    if(result) {
+      this.router.navigate(['/professor']); // Retorna à listagem
+    }
+
   }
 
 }
