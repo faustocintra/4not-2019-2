@@ -21,8 +21,8 @@ export class ProfessorFormComponent implements OnInit {
   ) { }
 
   title: string = 'Novo professor';
-  professor: any = {}; // Objeto vazio
-
+  professor: any = {};
+  
   async ngOnInit() {
     let params = this.actRoute.snapshot.params;
     if(params['id']) { // Se houver um parâmetro chamado id na rota

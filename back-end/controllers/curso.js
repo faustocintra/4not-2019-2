@@ -19,7 +19,7 @@ controller.listar = async function(req, res) {
    try {
       // find() sempre retorna um VETOR,
       // mesmo que vazio
-      const cursos = await Curso.find();
+      const cursos = await Curso.find().sort('nome');
       res.send(cursos);
    }
    catch(erro) {

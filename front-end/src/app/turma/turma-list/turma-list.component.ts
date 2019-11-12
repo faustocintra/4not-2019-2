@@ -18,7 +18,7 @@ export class TurmaListComponent implements OnInit {
   ) { }
 
   turmas: any = []; // Vetor vazio
-  displayedColumns: string[] = ['nome', 'professor', 'curso', 'editar', 'excluir'];
+  displayedColumns: string[] = ['nome', 'professor', 'curso', 'dia_semana', 'horario', 'editar', 'excluir'];
 
   async ngOnInit() {
     try {

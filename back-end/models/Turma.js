@@ -10,10 +10,10 @@ const schema = mongoose.Schema({
       enum: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb']
    },
    horario_inicial: {
-      type: Date, required: true
+      type: String, required: true
    },
    horario_final: {
-      type: Date, required: true
+      type: String, required: true
    },
    data_inicial: {
       type: Date, required: true
